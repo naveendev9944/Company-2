@@ -61,4 +61,30 @@ class Company{
 }
 
 
-							//SYs admin module
+							//Sys admin module
+							
+abstract class Computer{
+	private String ip;
+	
+	public getIp(){
+		return this.ip;
+	}
+	public setIp(String ip){
+		this.ip=ip;	
+	}
+}
+class Laptop extends Computer{
+	Laptop(String ip){
+		super.setIp(ip);
+	}
+}
+class Desktop extends Computer{
+	Desktop(String ip){
+		super.setIp(ip);
+	}
+}
+
+class SysAdminModule implements EmployeeListener{
+	static List<Computer> cmp=new ArrayList<>();
+	static assignIp() 
+}
