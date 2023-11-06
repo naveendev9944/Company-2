@@ -34,7 +34,7 @@ public class TestMain{
 	 		 case 2:{
 				System.out.println("Employees in the organaization");
 				for (Employee emp : HRModule.getEmployees()) {
-            				System.out.println("Employee: " + emp.getName() );
+            				System.out.println("Employee: " + emp.getName() + ", IP: " + emp.getIp());
         			}
 	      			break;
 	    		}
