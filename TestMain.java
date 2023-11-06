@@ -1,5 +1,6 @@
-import com.pratian.hr.*;
-import com.pratian.sysadmin.*;
+package main;
+import hr.Hr;	
+import sysadmin.Sysad;
 import java.util.*;
 public class TestMain{
     public static void main(String[] args) {
@@ -33,8 +34,7 @@ public class TestMain{
 	 		 case 2:{
 				System.out.println("Employees in the organaization");
 				for (Employee emp : HRModule.getEmployees()) {
-            				Computer computer = emp.getComputer();
-            				System.out.println("Employee: " + emp.getName() + ", IP: " + computer.getIp());
+            				System.out.println("Employee: " + emp.getName() );
         			}
 	      			break;
 	    		}

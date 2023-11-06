@@ -1,7 +1,7 @@
-package com.pratian.sysadmin;
+package sysadmin;
 import java.util.*;
-import com.pratian.hr.*;							
-public abstract class Computer{
+import hr.*;							
+abstract class Computer{
 	private short ip;
 	
 	public short getIp(){
@@ -44,6 +44,6 @@ class SysAdminModule implements EmployeeListener{
         	    computer = new Desktop(i++);
         	}
         	cmp.add(computer);
-        	employee.setComputer(computer);
+        	employee.setComputer(i-1);
 	} 
 }

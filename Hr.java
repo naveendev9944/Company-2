@@ -1,5 +1,5 @@
-package com.pratian.hr;
-import com.pratian.sysadmin.computer;
+package hr;
+
 import java.util.*;
 						
 enum Gender{
@@ -15,7 +15,7 @@ class Employee {
     private long empID;
     private Gender gender;
     private Role role;
-    private Computer computer;
+    private short computer;
 
     public Employee(String name, long empID,byte g,byte role) {
         this.name = name;
@@ -24,7 +24,7 @@ class Employee {
         this.role=Role.values()[role-1];;
     }
 
-    public void setComputer(Computer computer) {
+    public void setComputer(short computer) {
         this.computer = computer;
     }
 
@@ -32,10 +32,7 @@ class Employee {
         return name;
     }
 
-    public Computer getComputer() {
-        return computer;
-    }
-    
+  
     public Role getRole(){
 		return this.role;
 	}
