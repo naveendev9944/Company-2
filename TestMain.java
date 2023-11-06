@@ -1,12 +1,15 @@
 import hr.Employee;
 import hr.HRModule;	
+
 import sysadmin.SysAdminModule;
 import java.util.*;
 public class TestMain{
     public static void main(String[] args) {
         SysAdminModule sys = new SysAdminModule();
+        PayrollModule payroll=new PayrollModule();
         HRModule hr=new HRModule();
         hr.registerListener(sys);
+        hr.registerListener(payroll);
 	Scanner sc=new Scanner(System.in);
 
 	boolean loop = true;
