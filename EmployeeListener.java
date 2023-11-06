@@ -1,14 +1,6 @@
 package hr;
-
 import java.util.*;
 						
-enum Gender{
-	Male,
-	Female
-}
-
-
-
-interface EmployeeListener{ 
+public interface EmployeeListener{ 
 	void employeeAdded(Employee e);
 }

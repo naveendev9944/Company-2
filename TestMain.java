@@ -1,11 +1,12 @@
-package main;
-import hr.Hr;	
-import sysadmin.Sysad;
+import hr.Employee;
+import hr.HRModule;	
+import sysadmin.SysAdminModule;
 import java.util.*;
 public class TestMain{
     public static void main(String[] args) {
         SysAdminModule sys = new SysAdminModule();
-        HRModule.registerListener(sys);
+        HRModule hr=new HRModule();
+        hr.registerListener(sys);
 	Scanner sc=new Scanner(System.in);
 
 	boolean loop = true;
@@ -20,7 +21,7 @@ public class TestMain{
 	     		        System.out.println ("Enter the Employee Name:");
 	     		        String name=sc.nextLine();
 	     		        System.out.println ("Enter the Employee id:");
-	     		        int id=sc.nextInt();
+	     		        byte id=sc.nextByte();
 	     		        System.out.println ("Enter the gender\n1.Male\n2.Female");
 	     		        byte gender=sc.nextByte();
 	     		       	System.out.println ("Enter the role\n1.Manger\n2.Others");

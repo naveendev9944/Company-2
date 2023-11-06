@@ -1,15 +1,24 @@
 package hr;
 
 import java.util.*;
+enum Role{
+	Manager,
+	Others
+}
+enum Gender{
+	Male,
+	Female
+}
 
 public class Employee {
     private String name;
-    private long empID;
+    private byte empID;
     private Gender gender;
     private Role role;
     private short computer;
+    private int accno;
 
-    public Employee(String name, long empID,byte g,byte role) {
+    public Employee(String name, byte empID,byte g,byte role) {
         this.name = name;
         this.empID = empID;
         this.gender=Gender.values()[g-1];
@@ -18,6 +27,9 @@ public class Employee {
 
     public void setComputer(short computer) {
         this.computer = computer;
+    }
+    public void setAccount(int accno) {
+        this.accno = accno;
     }
 
     public String getName() {
@@ -29,5 +41,9 @@ public class Employee {
   
     public Role getRole(){
 		return this.role;
+	}
+	
+    public Role getMan(){
+		return Role.Manager;
 	}
 }

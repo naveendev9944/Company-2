@@ -1,6 +1,8 @@
 package sysadmin;
 import java.util.*;
-import hr.*;							
+import hr.*;
+
+					
 abstract class Computer{
 	private short ip;
 	
@@ -22,7 +24,7 @@ class Desktop extends Computer{
 	}
 }
 
-class SysAdminModule implements EmployeeListener{
+public class SysAdminModule implements EmployeeListener{
 	static List<Computer> cmp=new ArrayList<>();
 	static short i=1000;
 	
@@ -37,13 +39,14 @@ class SysAdminModule implements EmployeeListener{
 
 	public void employeeAdded(Employee employee) {
         	Computer computer;
-        	if (employee.getRole() == Role.Manager) {
+        	Object manager=employee.getMan();
+        	if (employee.getRole() ==manager) {
         	    computer = new Laptop(i++);
         	}
         	else {
         	    computer = new Desktop(i++);
         	}
         	cmp.add(computer);
-        	employee.setComputer(i-1);
+        	employee.setComputer(i);
 	} 
 }  
